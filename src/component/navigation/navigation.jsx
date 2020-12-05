@@ -5,7 +5,13 @@ import { logoutUser } from "../../store/auth/auth.utils";
 
 const Navigation = (props) => {
   const { isLoggingIn, isLoggedIn, logout } = props;
-  return <div>Navigation</div>;
+
+  return (
+    <div>
+      Navigation{" "}
+      {isLoggedIn && <button onClick={() => logout()}>Logout</button>}
+    </div>
+  );
 };
 
 const mapStateToProps = (state) => {
